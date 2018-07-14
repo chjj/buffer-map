@@ -1,0 +1,28 @@
+{
+  "name": "buffer-map",
+  "version": "0.0.0",
+  "description": "Buffer-keyed map for javascript",
+  "keywords": [
+    "buffer",
+    "map"
+  ],
+  "license": "MIT",
+  "repository": "git://github.com/bcoin-org/buffer-map.git",
+  "homepage": "https://github.com/bcoin-org/buffer-map",
+  "bugs": {
+    "url": "https://github.com/bcoin-org/buffer-map/issues"
+  },
+  "author": "Christopher Jeffrey <chjjeffrey@gmail.com>",
+  "main": "./lib/buffer-map.js",
+  "scripts": {
+    "lint": "eslint lib/ test/ || exit 0",
+    "test": "mocha --reporter spec test/*-test.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
