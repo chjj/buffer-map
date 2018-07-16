@@ -4,6 +4,7 @@
 'use strict';
 
 const assert = require('./util/assert');
+const crypto = require('crypto');
 const {BufferMap, BufferSet} = require('../lib/buffer-map');
 
 describe('buffer-map', function() {
