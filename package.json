@@ -19,10 +19,13 @@
     "test": "mocha --reporter spec test/*-test.js"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^5.1.0",
     "mocha": "^5.2.0"
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "browser": {
+    "./lib/custom": "./lib/custom-browser.js"
   }
 }
