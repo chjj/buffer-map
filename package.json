@@ -1,16 +1,16 @@
 {
   "name": "buffer-map",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Buffer-keyed map for javascript",
   "keywords": [
     "buffer",
     "map"
   ],
   "license": "MIT",
-  "repository": "git://github.com/bcoin-org/buffer-map.git",
-  "homepage": "https://github.com/bcoin-org/buffer-map",
+  "repository": "git://github.com/chjj/buffer-map.git",
+  "homepage": "https://github.com/chjj/buffer-map",
   "bugs": {
-    "url": "https://github.com/bcoin-org/buffer-map/issues"
+    "url": "https://github.com/chjj/buffer-map/issues"
   },
   "author": "Christopher Jeffrey <chjjeffrey@gmail.com>",
   "main": "./lib/buffer-map.js",
