@@ -1,6 +1,6 @@
 {
   "name": "buffer-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Buffer-keyed map for javascript",
   "keywords": [
     "buffer",
