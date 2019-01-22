@@ -1,6 +1,6 @@
 {
   "name": "buffer-map",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Buffer-keyed map for javascript",
   "keywords": [
     "buffer",
@@ -19,7 +19,7 @@
     "test": "bmocha --reporter spec test/*-test.js"
   },
   "devDependencies": {
-    "bmocha": "^0.1.0"
+    "bmocha": "^1.0.0"
   },
   "engines": {
     "node": ">=8.0.0"
