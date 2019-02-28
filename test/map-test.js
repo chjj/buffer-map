@@ -5,6 +5,7 @@
 
 const assert = require('assert');
 const crypto = require('crypto');
+const custom = require('util').inspect.custom || 'inspect';
 const {BufferMap, BufferSet} = require('../');
 
 describe('BufferMap', function() {
@@ -102,6 +103,19 @@ describe('BufferMap', function() {
 
       assert.deepStrictEqual(map.toKeys(), [key]);
       assert.deepStrictEqual(map.toValues(), [0]);
+
+      assert.deepStrictEqual(map[custom](),
+        new Map([[key.toString('hex'), 0]]));
+
+      const arr = new Uint8Array(key);
+
+      assert(map.has(arr) === true);
+      assert(map.has(arr.buffer) === true);
+
+      arr[0] ^= 1;
+
+      assert(map.has(arr) === false);
+      assert(map.has(arr.buffer) === false);
     }
   });
 
@@ -186,6 +200,19 @@ describe('BufferMap', function() {
 
       assert.deepStrictEqual(map.toKeys(), [key]);
       assert.deepStrictEqual(map.toValues(), [key]);
+
+      assert.deepStrictEqual(map[custom](),
+        new Set([key.toString('hex')]));
+
+      const arr = new Uint8Array(key);
+
+      assert(map.has(arr) === true);
+      assert(map.has(arr.buffer) === true);
+
+      arr[0] ^= 1;
+
+      assert(map.has(arr) === false);
+      assert(map.has(arr.buffer) === false);
     }
   });
 });
